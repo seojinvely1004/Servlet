@@ -10,7 +10,7 @@
 html태그 속성 rl -- "/a" -- http://localhost:8081/a -->
 <!-- <form action="http://localhost:8081/servlettest/loginprocess"> -->
 <!--<form action="loginprocess"> -->
-<form action="/servlettest/loginprocess">
+<form action="/servlettest/loginprocess" method="post"> 
 아이디 입력 : <input type="text" name="id"><br>
 암호 입력 : <input type="password" name="pw"><br>
 <select name="title" multiple="multiple">
@@ -19,7 +19,15 @@ html태그 속성 rl -- "/a" -- http://localhost:8081/a -->
 <option>데이터베이스과정</option>
 <option>서비스배포과정</option>
 </select>
+
 <input type=submit value="로그인">
 </form>
+<a href="/servlettest/loginprocess?id=a&pw=1&title=spring"> 서블릿호출 링크</a><!--  get방식-->
+<button id="btn">버튼클릭</button>
+<script>
+document.getElementById("btn").onclick = function(){
+	location.href="/servlettest/loginprocess?id=javascript&pw=1&title=spring";
+}
+</script>
 </body>
 </html>
