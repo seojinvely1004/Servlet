@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인폼</title>
+</head>
+<body>
+<h1>로그인하세요</h1>
+<!-- 서블릿 url -- "/a" -- http://localhost:8081/servlettest/a 
+html태그 속성 rl -- "/a" -- http://localhost:8081/a -->
+<!-- <form action="http://localhost:8081/servlettest/loginprocess"> -->
+<!--<form action="loginprocess"> -->
+<form action="/servlettest/loginprocess">
+아이디 입력 : <input type="text" name="id"><br>
+암호 입력 : <input type="password" name="pw"><br>
+<select name="title" multiple="multiple">
+<option>웹클라이언트과정</option>
+<option>웹서버과정</option>
+<option>데이터베이스과정</option>
+<option>서비스배포과정</option>
+</select>
+<input type=submit value="로그인">
+</form>
+</body>
+</html>
