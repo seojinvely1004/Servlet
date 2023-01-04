@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인폼</title>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script>
+//p213
+$(document).ready(function(){//스크립트가 폼 위에 있을 때 작성해줘야한다
+	$('form').on('submit',function(){//form태그의 로그인 버튼을 누르면 다음 function()을 실행하세요
+		//1. 아이입력란에 admin administrator administration 중 
+		// 한 개 입력시 role변수값 admin
+		//아니면 role변수값을 user로 설정한다. (아이디에 입력된값에 따라 다르게 설정한다.)
+		var id = $('input:text').val();
+		if(id == "admin" || id == "administrator" || id == "administration"){
+			$('input:hidden').val("admin")
+		}
+		else{
+			$('input:hidden').val("user");
+		}
+		//2. form action 속성값 = 'loginjs'로 지정해준다. 
+		//$('form').attr("action","loginjs");
+		this.action = "loginjs";
+		//3. 메서드 전송 방식은 post로 설정한다.
+		this.method="post";
+		
+	});
+});
+
+</script>
+</head>
+<body>
+<h1>로그인하세요</h1>
+<form action="/servlettest/loginjs" method="post"> 
+아이디 입력 : <input type="text" name="id"><br>
+암호 입력 : <input type="password" name="pw"><br>
+<input type=hidden name="role">
+<input type=submit value="로그인">
+</form>
+</body>
+</html>
