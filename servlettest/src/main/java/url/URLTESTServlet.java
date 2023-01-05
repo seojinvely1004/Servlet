@@ -26,16 +26,19 @@ public class URLTESTServlet extends HttpServlet {
 		String forward_uri =  uri_arr[uri_arr.length-1];
 		System.out.println(forward_uri);
 		if(forward_uri.equals("board")) {
-			forward_uri="boardwriting";
+			forward_uri="boardwriting";//sessionid세션정보
+			RequestDispatcher rd = request.getRequestDispatcher(forward_uri);
+			rd.forward(request, response);
 		}
 		else if(forward_uri.equals("member")) {
-			forward_uri="forward4";//menu=memberlist&page=?
+			forward_uri="forward4";//menu=memberlist&page=?//list null 오류
+			RequestDispatcher rd = request.getRequestDispatcher(forward_uri);
+			rd.forward(request, response);
 		}
 		else {
 			System.out.println("이동 url이 없습니다.");
 		}
-		RequestDispatcher rd = request.getRequestDispatcher(forward_uri);
-		rd.forward(request, response);
+		
 	}
 
 }
