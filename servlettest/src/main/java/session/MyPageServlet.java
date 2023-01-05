@@ -21,7 +21,7 @@ public class MyPageServlet extends HttpServlet {
 		if(session.getAttribute("sessionid") != null) {
 			out.println("<h1>" + session + "님의 회원정보 페이지입니다.</h1>");
 		}else {
-			out.println("<h1>로그인 먼저 하세요. 그래야 회원정보를 보여줍니다.</h1>");
+			out.println("<h1><a href='loginsession?id=test&pw=1111'>로그인</a> 먼저 하세요. 그래야 회원정보를 보여줍니다.</h1>");
 		}
 		String sessionid = (String)session.getAttribute("sessionid");//정보를얻어오는것이므로 getAttribute
 		//jdbc빼고실습한다 (세션에집중)
