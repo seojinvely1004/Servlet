@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//홈페이지 시작화면
+//홈페이지 시작화면.요청url > url분석(Controller) > dao,dto리턴/컬렉션리턴(Model) > 보여줄 화면(View)결정 
 @WebServlet("/*")
 public class URLTESTServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
