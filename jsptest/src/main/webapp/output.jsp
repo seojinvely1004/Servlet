@@ -11,8 +11,15 @@
 <%
 //get/post동일한방법으로 로직 처리한다
 if(request.getMethod().equals("GET")){
-	int start = Integer.parseInt(request.getParameter("start"));
-	int end = Integer.parseInt(request.getParameter("end"));
+	String start2 = request.getParameter("start");
+	String end2 = request.getParameter("end");
+	int start=0, end=0;
+	if(start2 == null && start2.equals("")){
+		start = Integer.parseInt(start2);
+	}
+	if(end2 == null && start2.equals("")){
+		end = Integer.parseInt(end2);
+	}
 %>
 	<table border=1>
 	<%for(int j=1; j<=9; j++){%>
