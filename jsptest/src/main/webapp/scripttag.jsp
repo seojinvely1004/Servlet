@@ -13,11 +13,13 @@
  //jsp서블릿 변환시 _jspService()지역변수로간주
 %>
 
-<%! void multiply(int a, int b){
-	System.out.println(a*b);//메서드를 추가하고 싶다
+<%!//선언문
+String msg2="멤버변수";//선언문내에서 선언한 변수는 '멤버변수'가된다.
+void multiply(int a, int b){
+	System.out.println(msg2 + ":" + a*b);//메서드를 추가하고 싶다
 }
 %>
-<% multiply(10,20);//추가한메서드를 호출한다
+<% multiply(10,20);//추가한메서드를 호출한다 (원하는 시점에)
 %>
 </body>
 </html>
