@@ -1,6 +1,7 @@
 <%@ page 
 contentType="text/html; charset=UTF-8"
 buffer="8kb"
+autoFlush="true"
 %>
 <!DOCTYPE html>
 <html>
@@ -16,5 +17,8 @@ buffer="8kb"
 <h1>예외 발생시 취소합니다</h1>
 <h1>버퍼크기 : <%= out.getBufferSize() %></h1><!-- 8192 -->
 <h1>버퍼크기 : <%= out.getRemaining() %></h1><!-- 7835 -->
+<% out.flush(); %> 
+<!-- 버퍼의 크기가 점점 줄어드는 것을 보면,  출력 후 버퍼 내부에 저장되고 있다는 것을 알 수 있다.  -->
+<!-- buffer flush() :전송 후에 비워라. -->
 </body>
 </html>
