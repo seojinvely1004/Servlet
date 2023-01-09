@@ -8,6 +8,8 @@
 </head>
 <body>
 <h1>로그인 화면입니다.</h1>
-<jsp:include page="bottom.jsp"/>
+<jsp:include page="bottom.jsp">
+	<jsp:param value="jsp" name="id"/>
+</jsp:include>
 </body>
 </html>

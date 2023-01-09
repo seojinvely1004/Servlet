@@ -11,5 +11,6 @@
 <img src="<%=request.getContextPath()%>/images/html5.jpg"><!-- 절대경로 -->
 <h3>연락처 - 이메일로 문의하세요.</h3>
 <h3>오시는 길 - 서울시 용산구 전자월드 3층</h3>
+<h1><%=request.getParameter("id") %></h1>
 </body>
 </html>
