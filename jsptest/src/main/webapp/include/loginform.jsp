@@ -10,6 +10,7 @@
 <h1>로그인 화면입니다.</h1>
 <jsp:include page="bottom.jsp">
 	<jsp:param value="jsp" name="id"/>
+	<jsp:param name="filename" value="<%=request.getRequestURI() %>" />
 </jsp:include>
 </body>
 </html>
