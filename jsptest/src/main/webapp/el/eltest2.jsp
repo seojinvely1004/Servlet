@@ -10,11 +10,11 @@
 <h1>${param.id }회원님</h1> 
 ${param.pw }암호를 입력하셨습니다. 
 <h3>점심주문 목록은<br>
-${paramValues.lunch[0] }<br>
+${!empty paramValues.lunch[0]? paramValues.lunch[0]:"없음" }<br>
 ${paramValues.lunch[1] }<br>
 ${paramValues.lunch[2] }<br>
 ${paramValues.lunch[3] }<br>
-${paramValues.lunch[4] }<br>
+${!empty paramValues.lunch[4]? paramValues.lunch[4]:"없음" }<br>
 입니다.
 </h3>
 </body>
