@@ -17,9 +17,9 @@ application.setAttribute("a","application공유");
 %>
 jsp b출력 = <%=b %><br>
 jsp a출력(pageContext) = <%=pageContext.getAttribute("a") %><br>
-jsp a2출력(request) = <%=request.getAttribute("a") %><br>
-jsp a3출력(session) = <%=session.getAttribute("a") %><br>
-jsp a4출력(application) = <%=application.getAttribute("a") %><br>
+jsp a출력(request) = <%=request.getAttribute("a") %><br>
+jsp a출력(session) = <%=session.getAttribute("a") %><br>
+jsp a출력(application) = <%=application.getAttribute("a") %><br>
 el b출력 = ${b }<br> <!--jsp에서변수를만들어 el까지쓰려면 setAttribute로값저장후출력 -->
 el a출력 = ${a }<br>
 el a출력 = ${a }<br>
