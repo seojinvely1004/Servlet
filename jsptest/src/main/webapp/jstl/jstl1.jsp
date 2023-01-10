@@ -20,10 +20,15 @@ ${pageContext.request.contextPath } <!-- // /jsptest :현재웹어플리케이�
 ${pageContext.request.remoteAddr }<!--  //0:0:0:0:0:0:0:1접속했던 클라이언트의 IP출력-->
 <c:set var="clientip" value="${pageContext.request.remoteAddr }"/>
 <c:set var="clientfile" value="${pageContext.request.requestURI }"/>
-h1>${id }</h1>
+<h1>${id }</h1>
 <h1>${pw }</h1>
 <h1>${name }</h1>
 <h1>${result }</h1>
+<H1>클라이언트IP = ${clientip }</H1>
+<H1>클라이언트요청 파일명 = ${clientfile }</H1>
+
+<c:remove var="clientip"/>
+<c:remove var="clientfile"/>
 <H1>클라이언트IP = ${clientip }</H1>
 <H1>클라이언트요청 파일명 = ${clientfile }</H1>
 </body>
