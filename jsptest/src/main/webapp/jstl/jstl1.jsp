@@ -29,6 +29,10 @@ ${pageContext.request.remoteAddr }<!--  //0:0:0:0:0:0:0:1접속했던 클라이�
 
 <c:remove var="clientip"/>
 <c:remove var="clientfile"/>
+
+<c:if test="${empty clientip }">
+<h1>클라이언트 i${clientip }</h1>
+</c:if>
 <H1>클라이언트IP = ${clientip }</H1>
 <H1>클라이언트요청 파일명 = ${clientfile }</H1>
 </body>
