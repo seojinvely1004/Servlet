@@ -25,7 +25,7 @@ el a출력 = ${a }<br>
 el a출력 = ${a }<br>
 el a출력 = ${a }<br>
 el a출력 = ${a }<br>
-
-<jsp:forward page="scoptest2.jsp"/>
+<a href="${pageContext.request.contextPath }/el/scopetest2.jsp">링크이동</a>
+<%--<jsp:forward page="/el/scopetest2.jsp"/> --%>
 </body>
 </html>
